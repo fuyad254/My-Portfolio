@@ -1,0 +1,55 @@
+
+[
+  {
+    "id": 1,
+    "category": "Frontend Development",
+    "skills": [
+      { "name": "HTML5", "level": "Proficient" },
+      { "name": "CSS3", "level": "Proficient" },
+      { "name": "JavaScript (ES6+)", "level": "Proficient" },
+      { "name": "React.js", "level": "Proficient" },
+      { "name": "Next.js", "level": "Proficient" },
+      { "name": "TypeScript", "level": "Proficient" },
+      { "name": "Tailwind CSS", "level": "Proficient" },
+      { "name": "Bootstrap 5", "level": "Proficient" },
+      { "name": "DaisyUI", "level": "Proficient" },
+      { "name": "Responsive Web Design", "level": "Proficient" },
+      { "name": "Figma to HTML", "level": "Proficient" },
+      { "name": "PSD to HTML", "level": "Proficient" },
+      { "name": "Adobe XD to HTML", "level": "Proficient" }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Backend Development",
+    "skills": [
+      { "name": "Node.js", "level": "Working Knowledge" },
+      { "name": "Express.js", "level": "Working Knowledge" },
+      { "name": "REST API", "level": "Working Knowledge" },
+      { "name": "CRUD Operations", "level": "Working Knowledge" }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Database & Authentication",
+    "skills": [
+      { "name": "MongoDB", "level": "Proficient" },
+      { "name": "Better Auth", "level": "Proficient" },
+      { "name": "Google OAuth", "level": "Working Knowledge" },
+      { "name": "GitHub OAuth", "level": "Working Knowledge" }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Tools & Technologies",
+    "skills": [
+      { "name": "Git", "level": "Proficient" },
+      { "name": "GitHub", "level": "Proficient" },
+      { "name": "VS Code", "level": "Proficient" },
+      { "name": "Vercel", "level": "Proficient" },
+      { "name": "Swiper.js", "level": "Proficient" },
+      { "name": "React Icons", "level": "Proficient" },
+      { "name": "Lucide Icons", "level": "Proficient" }
+    ]
+  }
+]

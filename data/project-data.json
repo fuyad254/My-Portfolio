@@ -1,0 +1,84 @@
+
+[
+  {
+    "id": 1,
+    "title": "Book Nook",
+    "subtitle": "Book Discovery & Sharing Platform",
+    "category": "Web Application",
+    "description": "A book discovery and sharing platform where readers can explore books, discover new collections, and connect with a community of book lovers.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "MongoDB",
+      "Better Auth",
+      "Swiper"
+    ],
+    "features": [
+      "Book discovery experience",
+      "Book collection sharing",
+      "Book borrowing concept",
+      "Hero slider with autoplay",
+      "Reader testimonials section",
+      "Responsive user interface"
+    ],
+    "github": "https://github.com/fuyad254/Book-Nook",
+    "live": "",
+    "image": "/images/book-nook.png"
+  },
+  {
+    "id": 2,
+    "title": "Bazar Dor",
+    "subtitle": "Daily Market Price Tracker",
+    "category": "Web Application",
+    "description": "A responsive web application that helps users explore everyday product prices in Bangladesh, track daily price changes, and compare prices across different markets.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "MongoDB",
+      "Better Auth"
+    ],
+    "features": [
+      "Daily rising and falling price highlights",
+      "Product listing with current prices",
+      "Category-wise product browsing",
+      "Product price sorting",
+      "Market-wise price comparison",
+      "Google, GitHub and email authentication",
+      "Responsive design"
+    ],
+    "github": "https://github.com/fuyad254/Assignment-7-Bazar-Dor",
+    "live": "https://assignment-7-bazar-dor-bz.vercel.app/",
+    "image": "/images/bazar-dor.png"
+  },
+  {
+    "id": 3,
+    "title": "FitLog",
+    "subtitle": "Workout Planner",
+    "category": "Fitness Web Application",
+    "description": "A modern workout planning application where users can explore exercises, organize daily workout plans, save favorite exercises, and track fitness activities.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "DaisyUI",
+      "Lucide React"
+    ],
+    "features": [
+      "Workout library",
+      "Exercise details and instructions",
+      "Today's workout plan",
+      "Save favorite workouts",
+      "Mark workouts as completed",
+      "Sort workouts by duration, calories and rating",
+      "Responsive desktop, tablet and mobile layout"
+    ],
+    "github": "https://github.com/fuyad254/Assignment-6-Fit-Log",
+    "live": "https://assignment-6-fit-log-seven.vercel.app/",
+    "image": "/images/fit-log.png"
+  }
+]
