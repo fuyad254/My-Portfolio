@@ -19,6 +19,8 @@ export type Project = {
   features: string[];
   github: string;
   live: string;
+  /** Optional link to a separate back-end/server repository. */
+  serverGithub?: string;
   image: string;
 };
 

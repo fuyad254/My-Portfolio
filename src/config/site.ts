@@ -20,7 +20,7 @@ const socials: SocialLink[] = [
   {
     name: "linkedin",
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/your-username",
+    href: "https://www.linkedin.com/in/fuyad",
     isPlaceholder: true,
   },
   {
@@ -31,13 +31,13 @@ const socials: SocialLink[] = [
   {
     name: "whatsapp",
     label: "WhatsApp",
-    href: "https://wa.me/8801XXXXXXXXX",
+    href: "https://wa.me/8801568807094",
     isPlaceholder: true,
   },
   {
     name: "discord",
     label: "Discord",
-    href: "https://discord.com/users/your-discord-id",
+    href: "https://discord.com/users/1539141371129233458",
     isPlaceholder: true,
   },
 ];
@@ -49,15 +49,15 @@ export const siteConfig = {
   role: "Full Stack Developer",
   email: "mdfuyadalkhatib@gmail.com",
   phone: {
-    label: "+880 1XXX-XXXXXX",
+    label: "+880 1568-807094",
     href: "tel:+8801XXXXXXXXX",
     isPlaceholder: true,
   },
   location: {
-    label: "Your City, Country",
+    label: "Rangpur, Bangladesh",
     isPlaceholder: true,
   },
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/fuyad-resume.pdf",
   socials,
 } as const;
 

@@ -8,6 +8,7 @@ import {
   CloseIcon,
   ExternalLinkIcon,
   GithubIcon,
+  ServerIcon,
 } from "@/components/icons";
 import { ProjectMedia } from "@/components/portfolio/ProjectMedia";
 import type { ProjectWithMedia } from "@/lib/types";
@@ -25,11 +26,36 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
     if (!project) return;
 
     const previouslyFocused = document.activeElement as HTMLElement | null;
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    const { body, documentElement } = document;
+    const scrollY = window.scrollY;
+    const scrollbarWidth = window.innerWidth - documentElement.clientWidth;
+
+    const previousStyles = {
+      bodyOverflow: body.style.overflow,
+      bodyPosition: body.style.position,
+      bodyTop: body.style.top,
+      bodyLeft: body.style.left,
+      bodyRight: body.style.right,
+      bodyWidth: body.style.width,
+      bodyPaddingRight: body.style.paddingRight,
+      htmlOverflow: documentElement.style.overflow,
+    };
+
+    // Lock the page at its current position so opening a project popup never
+    // scrolls the content behind it (including on touch devices).
+    documentElement.style.overflow = "hidden";
+    body.style.overflow = "hidden";
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.left = "0";
+    body.style.right = "0";
+    body.style.width = "100%";
+    if (scrollbarWidth > 0) {
+      body.style.paddingRight = `${scrollbarWidth}px`;
+    }
 
     const focusTimer = window.setTimeout(() => {
-      closeButtonRef.current?.focus();
+      closeButtonRef.current?.focus({ preventScroll: true });
     }, 30);
 
     const onKeyDown = (event: KeyboardEvent) => {
@@ -63,8 +89,18 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
     return () => {
       window.clearTimeout(focusTimer);
       document.removeEventListener("keydown", onKeyDown);
-      document.body.style.overflow = previousOverflow;
-      previouslyFocused?.focus();
+      documentElement.style.overflow = previousStyles.htmlOverflow;
+      body.style.overflow = previousStyles.bodyOverflow;
+      body.style.position = previousStyles.bodyPosition;
+      body.style.top = previousStyles.bodyTop;
+      body.style.left = previousStyles.bodyLeft;
+      body.style.right = previousStyles.bodyRight;
+      body.style.width = previousStyles.bodyWidth;
+      body.style.paddingRight = previousStyles.bodyPaddingRight;
+      // The page uses smooth scrolling, so force an instant jump back to the
+      // exact position and avoid focus() scrolling somewhere else.
+      window.scrollTo({ top: scrollY, behavior: "instant" });
+      previouslyFocused?.focus({ preventScroll: true });
     };
   }, [project, onClose]);
 
@@ -96,7 +132,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           <CloseIcon className="size-5" />
         </button>
 
-        <div className="overflow-y-auto overscroll-contain">
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
           <div className="relative aspect-[16/10] w-full shrink-0 sm:aspect-[2.2/1]">
             <ProjectMedia
               project={project}
@@ -207,6 +243,18 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 View Code
                 <GithubIcon className="size-4 text-accent transition-transform group-hover:-translate-y-0.5" />
               </a>
+
+              {project.serverGithub ? (
+                <a
+                  href={project.serverGithub}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="group inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-white/12 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-fg transition hover:border-accent/40 hover:bg-white/[0.06]"
+                >
+                  Server GitHub
+                  <ServerIcon className="size-4 text-accent transition-transform group-hover:-translate-y-0.5" />
+                </a>
+              ) : null}
             </div>
           </div>
         </div>

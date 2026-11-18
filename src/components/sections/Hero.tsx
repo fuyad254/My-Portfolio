@@ -63,7 +63,7 @@ export function Hero() {
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <a
                 href={siteConfig.resumeUrl}
-                download
+                download="fuyad-resume.pdf"
                 className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-[#04211d] shadow-[0_18px_45px_-18px_rgba(94,234,212,0.75)] transition duration-300 hover:-translate-y-0.5 hover:bg-accent-strong"
               >
                 <DownloadIcon className="size-[18px] transition-transform group-hover:translate-y-0.5" />

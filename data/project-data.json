@@ -24,7 +24,8 @@
       "Responsive user interface"
     ],
     "github": "https://github.com/fuyad254/Book-Nook",
-    "live": "",
+    "live": "https://book-nook-seven.vercel.app",
+    "serverGithub": "https://github.com/fuyad254/Book-Nook-Server",
     "image": "/images/book-nook.png"
   },
   {

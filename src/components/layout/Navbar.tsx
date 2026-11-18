@@ -129,7 +129,7 @@ export function Navbar() {
         <div className="flex items-center gap-2 lg:hidden">
           <a
             href={siteConfig.resumeUrl}
-            download
+            download="fuyad-resume.pdf"
             className="hidden items-center gap-2 rounded-full border border-white/10 px-3.5 py-2 text-xs font-medium text-muted transition hover:border-accent/40 hover:text-fg sm:inline-flex"
           >
             <DownloadIcon className="size-3.5" />
@@ -205,7 +205,7 @@ export function Navbar() {
               <SocialLinks names={["linkedin", "github", "discord"]} />
               <a
                 href={siteConfig.resumeUrl}
-                download
+                download="fuyad-resume.pdf"
                 onClick={() => setOpen(false)}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-[#04211d] transition hover:bg-accent-strong"
               >
